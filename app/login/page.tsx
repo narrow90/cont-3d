@@ -25,12 +25,12 @@ export default function Login(){
     <div className="card login-card">
       <div className="type-switch login-switch"><button className={mode==='login'?'active income':''} type="button" onClick={()=>setMode('login')}>Accedi</button><button className={mode==='signup'?'active income':''} type="button" onClick={()=>setMode('signup')}>Primo accesso</button></div>
       <form onSubmit={submit} className="form" style={{gridTemplateColumns:'1fr'}}>
-        <div className="field"><label>Email Gmail autorizzata</label><input required type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="nome@gmail.com" autoComplete="email"/></div>
+        <div className="field"><label>Email</label><input required type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="nome@gmail.com" autoComplete="email"/></div>
         <div className="field"><label>Password</label><input required minLength={8} type="password" value={password} onChange={e=>setPassword(e.target.value)} placeholder="Minimo 8 caratteri" autoComplete={mode==='login'?'current-password':'new-password'}/></div>
         {message && <div className="auth-message">{message}</div>}
         <button className="btn" disabled={busy}>{busy ? 'Attendi…' : mode==='login' ? 'Accedi' : 'Crea account'}</button>
       </form>
-      <p className="login-note">Accesso consentito solo a Diego, Andrea e Talpone. Tutti hanno permessi Admin.</p>
+      <p className="login-note">Contabilità V 1.0</p>
     </div>
   </div>
 }
